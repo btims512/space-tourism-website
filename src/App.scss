@@ -1,0 +1,16 @@
+$font-family: 'Arial', sans-serif;
+$base-font-size: 16px;
+
+body {
+  font-family: $font-family;
+  font-size: $base-font-size;
+}
+
+@mixin font-style($size, $family) {
+  font-size: $size;
+  font-family: $family;
+}
+
+.some-class {
+  @include font-style(20px, $font-family);
+}
