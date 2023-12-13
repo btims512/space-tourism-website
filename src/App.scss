@@ -2,7 +2,6 @@
   font-family: 'Barlow Condensed';
   src: url('./fonts/BarlowCondensed-Regular.ttf') format('truetype');
 }
-
 @font-face {
   font-family: 'Bellefair';
   src: url('./fonts/Bellefair-Regular.ttf') format('truetype');
@@ -11,6 +10,10 @@
 $font-family: 'Barlow Condensed', sans-serif;
 $font-family-bellefair: 'Bellefair', serif;
 $base-font-size: 16px;
+
+$color-dark: #0B0D17;
+$color-light-blue: #D0D6F9;
+$color-white: #FFFFFF;
 
 html, body, #root, .App  {
   height: 100%;
@@ -25,6 +28,7 @@ body {
 h1, h2, h3, h4 {
   font-family: $font-family-bellefair;
   color: #ffffff;
+  font-weight: 400;
 }
 
 h1 {
@@ -53,10 +57,16 @@ h5 {
   font-size: 28px;
 }
 
-.sub-1 {
+.sub-2 {
   font-size: 14px;
   word-spacing: 2.35px;
 }
+
+.nav-text {
+  font-size: 16px;
+  word-spacing: 2.7px;
+}
+
 
 p {
   color: #ffffff;
