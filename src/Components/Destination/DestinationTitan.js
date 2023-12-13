@@ -1,22 +1,15 @@
-import React from "react";
-// Import your CSS/SCSS file here if needed
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import "../../App.scss";
+
+import DestinationNav from "./DestinationNav";
 
 function DestinationTitan() {
   return (
     <div>
-      {/* Navigation and Content */}
-      <nav>
-        <ul>
-          <li>00 Home</li>
-          <li>01 Destination</li>
-          <li>02 Crew</li>
-          <li>03 Technology</li>
-        </ul>
-      </nav>
-
       <section>
         <h1>01 Pick your destination</h1>
-        <nav>{/* Navigation for Moon, Mars, Europa, Titan */}</nav>
+        <DestinationNav />
 
         <h2>Titan</h2>
         <p>

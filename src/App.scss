@@ -1,9 +1,65 @@
-$font-family: 'Arial', sans-serif;
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url('./fonts/BarlowCondensed-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bellefair';
+  src: url('./fonts/Bellefair-Regular.ttf') format('truetype');
+}
+
+$font-family: 'Barlow Condensed', sans-serif;
+$font-family-bellefair: 'Bellefair', serif;
 $base-font-size: 16px;
+
+html, body, #root, .App  {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: $font-family;
-  font-size: $base-font-size;
+}
+
+h1, h2, h3, h4 {
+  font-family: $font-family-bellefair;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 150px;
+}
+
+h2 {
+  font-size: 100px;
+}
+
+h3 {
+  font-size: 56px;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+h5 {
+  color: #ffffff;
+  font-size: 28px;
+  word-spacing: 4.75px;
+}
+
+.sub-1 {
+  font-size: 28px;
+}
+
+.sub-1 {
+  font-size: 14px;
+  word-spacing: 2.35px;
+}
+
+p {
+  color: #ffffff;
 }
 
 @mixin font-style($size, $family) {
@@ -13,4 +69,25 @@ body {
 
 .some-class {
   @include font-style(20px, $font-family);
+}
+
+.homepage {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  padding-right: 10%;
+  background-image: url('./assets/home/background-home-desktop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  padding: 20px;
+  max-width: 600px;
+}
+
+.destination-nav {
+  // Styles for destination nav
 }
