@@ -15,7 +15,7 @@ $color-dark: #0B0D17;
 $color-light-blue: #D0D6F9;
 $color-white: #FFFFFF;
 
-html, body, #root, .App  {
+html, body, #root, .App {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -23,81 +23,137 @@ html, body, #root, .App  {
 
 body {
   font-family: $font-family;
+  text-transform: uppercase;
 }
 
 h1, h2, h3, h4 {
   font-family: $font-family-bellefair;
-  color: #ffffff;
+  color: $color-white;
   font-weight: 400;
+  margin: 0;
 }
 
-h1 {
-  font-size: 150px;
-}
-
-h2 {
-  font-size: 100px;
-}
-
-h3 {
-  font-size: 56px;
-}
-
-h4 {
-  font-size: 32px;
-}
+h1 { font-size: 150px; }
+h2 { font-size: 100px; }
+h3 { font-size: 56px; }
+h4 { font-size: 32px; }
 
 h5 {
-  color: #ffffff;
+  color: $color-white;
   font-size: 28px;
   word-spacing: 4.75px;
+  margin: 0;
 }
 
-.sub-1 {
-  font-size: 28px;
-}
-
-.sub-2 {
-  font-size: 14px;
-  word-spacing: 2.35px;
-}
-
-.nav-text {
-  font-size: 16px;
-  word-spacing: 2.7px;
-}
-
+.sub-1 { font-size: 28px; }
+.sub-2 { font-size: 14px; word-spacing: 2.35px; }
+.nav-text { font-size: 16px; word-spacing: 2.7px; }
 
 p {
-  color: #ffffff;
+  color: $color-white;
+  font-size: 18px;
+  margin: 0;
+  text-transform: none;
 }
+
+.p { max-width: 350px; }
+.space { margin-left: -10px; margin-bottom: 20px; }
 
 @mixin font-style($size, $family) {
   font-size: $size;
   font-family: $family;
 }
 
-.some-class {
-  @include font-style(20px, $font-family);
+.some-class { @include font-style(20px, $font-family); }
+
+.container { padding: 20px; max-width: 600px; }
+
+.destination-nav {
+  // Styles for destination nav
 }
 
 .homepage {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100vh;
-  padding-right: 10%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  padding-left: 10%;
+  padding-top: 10%;
   background-image: url('./assets/home/background-home-desktop.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+.explore-button {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  background-color: $color-white;
+  border: none;
+  transition: background-color 1s, box-shadow 1s, transform 1s; 
+  
+  h4 { color: $color-dark; margin: 0; }
+}
+
+button { color: $color-dark; }
 
 .container {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
   padding: 20px;
-  max-width: 600px;
 }
 
-.destination-nav {
-  // Styles for destination nav
+.explore-button:hover {
+  background-color: $color-white;
+  box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: background-color 1s, box-shadow 1s, transform 1s;
+}
+
+.destination-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%; // Adjust padding as necessary
+  min-height: 100vh;
+  color: $color-white;
+  background-image: url('./assets/destination/background-destination-desktop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.destination-content {
+  width: 50%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  h1 {
+    font-size: 28px; 
+    margin-bottom: 20px; 
+  }
+  
+  h2 {
+    font-size: 100px; 
+    margin-bottom: 20px; 
+  }
+
+  p {
+    font-size: 18px; 
+  }
+  
+}
+
+.destination-image {
+  width: 50%; 
 }

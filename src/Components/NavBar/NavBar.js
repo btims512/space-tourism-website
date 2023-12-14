@@ -10,6 +10,7 @@ function Navbar() {
       <nav className="navbar">
         <img src={Logo} alt="Logo" style={{ marginLeft: "30px" }} />
         <img src={Line} alt="Line" style={{ width: "400px" }} />
+        <div className="right-nav-container">
         <ul>
           <li>
             <Link to="/">00 Home</Link>
@@ -24,6 +25,7 @@ function Navbar() {
             <Link to="/technology/vehicle">03 Technology</Link>
           </li>
         </ul>
+        </div>
       </nav>
     </div>
   );
